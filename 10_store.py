@@ -54,37 +54,49 @@ print('Лампа -', lamps_quantity, 'шт, стоимость', lamps_cost, '�
 
 # TODO здесь ваш код
 
-lamp_code = goods['Лампа']
-lamp_quantity = store[lamp_code][0]['quantity']
-lamp_price = store[lamp_code][0]['price']
-lamp_cost = lamp_quantity * lamp_price
-print('Лампа -', lamp_quantity, 'шт, стоимость', lamp_cost, 'руб')
 
+# Стол
 table_code = goods['Стол']
-table_quantity_1 = store[table_code][0]['quantity']
-table_price_1 = store[table_code][0]['price']
-table_quantity_2 = store[table_code][1]['quantity']
-table_price_2 = store[table_code][1]['price']
-table_cost = (table_quantity_1 * table_price_1) + (table_quantity_2 * table_price_2)
+table_item_1 = store[table_code][0]
+table_quantity_1 = table_item_1['quantity']
+table_price_1 = table_item_1['price']
+
+table_item_2 = store[table_code][1]
+table_quantity_2 = table_item_2['quantity']
+table_price_2 = table_item_2['price']
+
 table_total_quantity = table_quantity_1 + table_quantity_2
+table_cost = (table_quantity_1 * table_price_1) + (table_quantity_2 * table_price_2)
 print('Стол -', table_total_quantity, 'шт, стоимость', table_cost, 'руб')
 
+# Диван
 sofa_code = goods['Диван']
-sofa_quantity_1 = store[sofa_code][0]['quantity']
-sofa_price_1 = store[sofa_code][0]['price']
-sofa_quantity_2 = store[sofa_code][1]['quantity']
-sofa_price_2 = store[sofa_code][1]['price']
-sofa_cost = (sofa_quantity_1 * sofa_price_1) + (sofa_quantity_2 * sofa_price_2)
+sofa_item_1 = store[sofa_code][0]
+sofa_quantity_1 = sofa_item_1['quantity']
+sofa_price_1 = sofa_item_1['price']
+
+sofa_item_2 = store[sofa_code][1]
+sofa_quantity_2 = sofa_item_2['quantity']
+sofa_price_2 = sofa_item_2['price']
+
 sofa_total_quantity = sofa_quantity_1 + sofa_quantity_2
+sofa_cost = (sofa_quantity_1 * sofa_price_1) + (sofa_quantity_2 * sofa_price_2)
 print('Диван -', sofa_total_quantity, 'шт, стоимость', sofa_cost, 'руб')
 
+# Стул
 chair_code = goods['Стул']
-chair_quantity_1 = store[chair_code][0]['quantity']
-chair_price_1 = store[chair_code][0]['price']
-chair_quantity_2 = store[chair_code][1]['quantity']
-chair_price_2 = store[chair_code][1]['price']
-chair_quantity_3 = store[chair_code][2]['quantity']
-chair_price_3 = store[chair_code][2]['price']
-chair_cost = (chair_quantity_1 * chair_price_1) + (chair_quantity_2 * chair_price_2) + (chair_quantity_3 * chair_price_3)
+chair_item_1 = store[chair_code][0]
+chair_quantity_1 = chair_item_1['quantity']
+chair_price_1 = chair_item_1['price']
+
+chair_item_2 = store[chair_code][1]
+chair_quantity_2 = chair_item_2['quantity']
+chair_price_2 = chair_item_2['price']
+
+chair_item_3 = store[chair_code][2]
+chair_quantity_3 = chair_item_3['quantity']
+chair_price_3 = chair_item_3['price']
+
 chair_total_quantity = chair_quantity_1 + chair_quantity_2 + chair_quantity_3
+chair_cost = (chair_quantity_1 * chair_price_1) + (chair_quantity_2 * chair_price_2) + (chair_quantity_3 * chair_price_3)
 print('Стул -', chair_total_quantity, 'шт, стоимость', chair_cost, 'руб')
