@@ -65,3 +65,9 @@
 - Вывести стоимость каждого вида товара на складе и общую цену
 
 ![image](https://github.com/user-attachments/assets/c91e86dd-d73b-47ae-ad13-f073ee11ca15)
+
+## Источники
+1. https://doka.guide/tools/markdown/
+2. https://github.com/still-coding/report_demo
+3. https://docs.python.org/3/tutorial/
+
