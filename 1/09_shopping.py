@@ -56,19 +56,4 @@ sweets = {
     ],
 }   
 # Указать надо только по 2 магазина с минимальными ценами
-lowprice={}
-for i in sweets:
-    lowprice[i]=[]
-    for k in sweets[i]:
-        a=k['price']
-        for j in sweets[i]:
-            if j['price'] > a:
-                a=j['price']
-    for j in sweets[i]:
-        if j['price'] < a:
-            lowprice[i].append(j)
-for i in lowprice:
-    print(i)
-    for j in lowprice[i]:
-        print(j['shop'],j['price'])
-    print("\n")
+print(sweets)
