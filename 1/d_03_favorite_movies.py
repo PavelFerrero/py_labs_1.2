@@ -17,9 +17,9 @@ def main():
     # как указано в задании!
 
     # TODO здесь ваш код
-    #print(my_favorite_movies[:10])
-    #print(my_favorite_movies[-15:])
-    #print(my_favorite_movies[12:25])
-    #print(my_favorite_movies[-22:-17])
-    return(my_favorite_movies[:10],my_favorite_movies[-15:],my_favorite_movies[12:25],my_favorite_movies[-22:-17])
+    print(my_favorite_movies[:10])
+    print(my_favorite_movies[-15:])
+    print(my_favorite_movies[12:25])
+    print(my_favorite_movies[-22:-17])
+    return('=')
 print(main())
