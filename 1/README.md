@@ -2,7 +2,7 @@
 ## 00
 Составить словарь словарей расстояний между городами
 
-![image](https://github.com/user-attachments/assets/e02c285c-4bf8-4691-a12e-8c7ab0c53a38)
+![image](https://github.com/user-attachments/assets/163459db-2630-4ada-847e-fcc5ec11dcb8)
 
 ## 01
 Вычислить площадь круга. Вывести на экран с точностью 4 знака после запятой. Вывести, входят ли точки в круг
@@ -25,7 +25,7 @@
 ## 04
 Создать списки членов семьи и их роста. Вывести рост отца и сумму роста членов семьи
 
-![image](https://github.com/user-attachments/assets/be02cdba-0ebe-4e0f-bb22-25b44dde7adc)
+![image](https://github.com/user-attachments/assets/20a094eb-99db-458f-9654-41e50d02b409)
 
 ## Задание 05
 - посадите медведя (bear) между львом и кенгуру и выведите список на консоль
