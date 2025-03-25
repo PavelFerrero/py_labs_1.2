@@ -17,6 +17,5 @@
 ![image](https://github.com/user-attachments/assets/d84a0e4b-edc7-4ede-841a-568af41aec9c)
 
 ## Источники
-https://youtu.be/IJDJ0kBx2LM
-https://proglib.io/p/samouchitel-po-python-dlya-nachinayushchih-chast-13-rekursivnye-funkcii-2023-01-23
-https://habr.com/ru/articles/337030/
+[🐍 Самоучитель по Python для начинающих. Часть 13: Рекурсивные функции](https://proglib.io/p/samouchitel-po-python-dlya-nachinayushchih-chast-13-rekursivnye-funkcii-2023-01-23)
+[Как работает рекурсия – объяснение в блок-схемах и видео](https://habr.com/ru/articles/337030/)
