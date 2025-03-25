@@ -33,6 +33,6 @@
 ![image](https://github.com/user-attachments/assets/6ff42aac-5e8a-4c72-9437-78695cfac1e6)
 
 ## Источники:
-1. https://habr.com/ru/companies/otus/articles/529356/
-2. https://docs.python.org/3/library/itertools.html
-3. https://proglib.io/p/iteriruemsya-pravilno-20-priemov-ispolzovaniya-v-python-modulya-itertools-2020-01-03
+1. [Itertools в Python](https://habr.com/ru/companies/otus/articles/529356/)
+2. [itertools — Functions creating iterators for efficient looping](https://docs.python.org/3/library/itertools.html)
+3. [Итерируем правильно: 20 приемов использования в Python модуля itertools](https://proglib.io/p/iteriruemsya-pravilno-20-priemov-ispolzovaniya-v-python-modulya-itertools-2020-01-03)
