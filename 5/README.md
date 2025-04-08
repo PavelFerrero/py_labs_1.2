@@ -44,3 +44,19 @@ for x, y, color in invert_pixels(pixels, width, height):
 # Сохранение результата
 image.convert('RGB').save("output.png")
 print("Инверсия завершена! Результат сохранён в output.png")
+```
+
+###  Изображение ДО:
+
+![image](https://github.com/user-attachments/assets/c7a73d39-9c29-400b-b1b9-21a9a8b9a3c7)
+
+### Изображение ПОСЛЕ:
+
+![image](https://github.com/user-attachments/assets/65f02e50-20e5-4633-9161-c80a6749cf98)
+
+
+### Источники:
+
+[Pillow]{https://python-scripts.com/pillow?ysclid=m9826lcsz7721883869}
+
+[Генераторы в Python](https://habr.com/ru/articles/866616/)
