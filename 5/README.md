@@ -58,12 +58,7 @@ for x, y, inverted_color in inverted_pixels:
 
 # Принудительно конвертируем в RGB для корректного отображения
 izobrazhenie = izobrazhenie.convert('RGB')
-
-# Сохраняем результат
 izobrazhenie.save("C:\Github_py\labs1.png")
-
-print("Инверсия завершена! Сохранено как output.png")
-
 ```
 
 ###  Изображение ДО:
