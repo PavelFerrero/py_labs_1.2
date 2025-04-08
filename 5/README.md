@@ -10,53 +10,77 @@
 ### Цель  
 Разработать генератор для инверсии цветов пикселей изображения с использованием функций высшего порядка (`map`, `reduce`, `filter`).  
 
-### Реализация  
-1. **Библиотеки:** Использован модуль `PIL` (Pillow) для работы с изображениями.  
-2. **Генератор `invert_pixels`:**  
-   - Открывает изображение в режиме `RGBA`.  
-   - Инвертирует RGB-каналы каждого пикселя (вычитает из 255).  
-   - Возвращает координаты и новый цвет через `yield`.  
-3. **Применение изменений:**  
-   - Генератор обходит все пиксели и применяет инверсию.  
-   - Результат сохраняется в формате `RGB`.  
+### Принцип Работы
+1. **Библиотеки:** Использован модуль `PIL` (Pillow) для работы с изображениями.
+2. **Генератор `pikseli_generator`:**
+   - Открывает изображение в режиме `RGBA` с сохранением прозрачности.
+   - Последовательно возвращает кортежи `(x, y, (r, g, b, a))` для каждого пикселя через `yield`.
+   - Позволяет обрабатывать изображение построчно без загрузки всех данных в память.
+3. **Функция `invert_piksel`:**
+   - Принимает данные пикселя в формате `(x, y, (r, g, b, a))`.
+   - Инвертирует цветовые каналы RGB по формуле `(255 - r, 255 - g, 255 - b)`.
+   - Сохраняет исходное значение альфа-канала без изменений.
+4. **Применение `map`:**
+   - Функция высшего порядка `map` применяет `invert_piksel` к каждому элементу генератора.
+   - Создает итератор с инвертированными пикселями в формате `(x, y, inverted_color)`.
+5. **Сохранение результата:**
+   - Обработанные пиксели записываются обратно в изображение.
+   - Производится конвертация в режим `RGB` для корректного отображения.
+   - Результат сохраняется с сохранением исходного формата.
 
 ### Код  
 ```python
 from PIL import Image
 
-# Открытие изображения
-image = Image.open("input.png").convert('RGBA')
-pixels = image.load()
-width, height = image.size
+# Открываем изображение
+izobrazhenie = Image.open("C:\Github_py\labs1.png").convert('RGBA')
+pikseli = izobrazhenie.load()
 
-# Генератор для инверсии пикселей
-def invert_pixels(image_pixels, width, height):
+shirina, vysota = izobrazhenie.size
+
+# Генератор для перебора пикселей
+def pikseli_generator(image_pixels, width, height):
     for x in range(width):
         for y in range(height):
-            r, g, b, a = image_pixels[x, y]
-            inverted = (255 - r, 255 - g, 255 - b, a)
-            yield x, y, inverted
+            yield (x, y, image_pixels[x, y])  # (x, y, (r, g, b, a))
 
-# Применение инверсии
-for x, y, color in invert_pixels(pixels, width, height):
-    pixels[x, y] = color
+# Функция для инверсии цвета
+def invert_piksel(piksel_data):
+    x, y, (r, g, b, a) = piksel_data
+    inverted_color = (255 - r, 255 - g, 255 - b, a)
+    return x, y, inverted_color
 
-# Сохранение результата
-image.convert('RGB').save("output.png")
-print("Инверсия завершена! Результат сохранён в output.png")
+# Применяем map к генератору
+inverted_pixels = map(invert_piksel, pikseli_generator(pikseli, shirina, vysota))
+
+# Записываем пиксели обратно в изображение
+for x, y, inverted_color in inverted_pixels:
+    pikseli[x, y] = inverted_color
+
+# Принудительно конвертируем в RGB для корректного отображения
+izobrazhenie = izobrazhenie.convert('RGB')
+
+# Сохраняем результат
+izobrazhenie.save("C:\Github_py\labs1.png")
+
+print("Инверсия завершена! Сохранено как output.png")
+
 ```
 
 ###  Изображение ДО:
 
-![image](https://github.com/user-attachments/assets/c7a73d39-9c29-400b-b1b9-21a9a8b9a3c7)
+![image](https://github.com/user-attachments/assets/4486d99e-8be4-4ceb-af16-5981236d6b63)
 
 ### Изображение ПОСЛЕ:
 
-![image](https://github.com/user-attachments/assets/65f02e50-20e5-4633-9161-c80a6749cf98)
+![image](https://github.com/user-attachments/assets/8cda6d54-5aa7-4517-ac1f-79cb27b578b3)
+
 
 
 ### Источники:
 
-[Pillow]{https://python-scripts.com/pillow?ysclid=m9826lcsz7721883869}
+[Pillow](https://python-scripts.com/pillow?ysclid=m9826lcsz7721883869)
 
 [Генераторы в Python](https://habr.com/ru/articles/866616/)
+
+[map в Puthon](https://skillbox.ru/media/code/funkciya-map-v-python-zachem-nuzhna-i-kak-ey-polzovatsya/?ysclid=m984sk6958411790248)
