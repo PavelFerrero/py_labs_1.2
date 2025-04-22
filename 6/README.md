@@ -20,4 +20,4 @@
 
 ## Использованные материалы
 - [python-docx](https://python-docx.readthedocs.io/en/latest/)
-- [guizero]([https://openpyxl.readthedocs.io/en/stable/](https://lawsie.github.io/guizero/))
+- [guizero](https://openpyxl.readthedocs.io/en/stable/](https://lawsie.github.io/guizero/)
