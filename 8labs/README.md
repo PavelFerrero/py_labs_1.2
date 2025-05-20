@@ -22,3 +22,5 @@
 [Guizero](https://lawsie.github.io/guizero/)
 
 [ООП в Python](https://proglib.io/p/python-oop?ysclid=mavzfan2mi437705007)
+
+[Инкапсуляция Python](https://habr.com/ru/articles/444338/)
